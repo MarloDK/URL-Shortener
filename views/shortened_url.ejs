@@ -11,11 +11,11 @@
 </head>
 <body>
     <h1 class="center">URL Shortener</h1>
-    <div class="center" id="fullURL"><a href="../<%= url %>">localhost:8080/<%= url %></a></div>
+    <form class="center" action="../goto" method="POST">
+        <div class="center" id="fullURL"><a href="../<%= url %>">localhost:8080/<%= url %></a></div>
 
-    <form class="center" action="../convertNext" method="POST">
         <div class="button-display center">
-            <button type="submit" name="convertNext" value="convertNext" class="convert-next">Convert next</button>
+            <button type="submit" name="back" value="back" class="convert-next">Convert next</button>
             <button type="submit" name="viewAllURLs" value="viewAll" class="view-all">All URLs</button>
             <button type="submit" name="copyLink" value="copyLink" class="copy-link">Copy URL</button>
         </div>

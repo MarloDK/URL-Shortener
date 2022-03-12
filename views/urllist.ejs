@@ -5,27 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="/styles/main.css" rel="stylesheet">
+    <link href="/styles/urllist.css" rel="stylesheet">
 
     <title>URL Shortener</title>
 </head>
 <body>
     <h1 class="center">URL List</h1>
-    <table class="center">
-        <thead>
-            <tr>
-                <th>Full URL</th>
-                <th>Shortened URL</th>
-                <th>Times used</th>
-            </tr>
-        </thead>
-            <% shortURLs.forEach(shortURL => { %> 
-                <tbody>
-                    <td><a href="<%= shortURL.url %>"><%= shortURL.url %></a></td>
-                    <td><a href="<%= shortURL.short %>"><%= shortURL.short %></a></td>
-                    <td><%= shortURL.timesClicked %></td>
-                </tbody>
-            <% }) %> 
-    </table>
+
+    <form class="center" action="goto" method="post">
+        <div class="table-container center">
+            <table class="center" cell-spacing=0>
+                <thead>
+                    <tr>
+                        <th>Full URL</th>
+                        <th>Shortened URL</th>
+                        <th>Times used</th>
+                    </tr>
+                </thead>
+                    <% shortURLs.forEach(shortURL => { %> 
+                        <tbody>
+                            <td><a href="<%= shortURL.url %>"><%= shortURL.url %></a></td>
+                            <td><a href="<%= shortURL.short %>"><%= shortURL.short %></a></td>
+                            <td><%= shortURL.timesClicked %></td>
+                        </tbody>
+                    <% }) %> 
+            </table>
+        </div>
+
+        <button type="submit" name="back" value="back" class="back-btn center">Back</button>
+    </form>
 </body>
 </html>

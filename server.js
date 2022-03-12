@@ -49,13 +49,13 @@ app.post('/shortenURL', async (req, res) => {
     res.redirect('shortened/' + shortUrl.short)
 })
 
-app.post('/convertNext', (req, res) => {
-    const convertNext = req.body.convertNext
+app.post('/goto', (req, res) => {
+    const back = req.body.back
     const copyLink = req.body.copyLink
     const viewAll = req.body.viewAllURLs
 
     // If convertNext is pressed, it won't be null
-    if (convertNext != null) {
+    if (back != null) {
         
         return res.redirect('../')
     }

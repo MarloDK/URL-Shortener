@@ -6,9 +6,6 @@ body {
 }
 
 * {
-    padding: 0;
-    margin: 0;
-
     box-sizing: border-box;
 }
 
@@ -20,7 +17,6 @@ body {
 
 h1 {
     margin-bottom: 0px;
-    color: #c5c5c5;
     text-align: center;
 }
 
@@ -35,48 +31,64 @@ a:hover {
 
 /* URL Display design */
 #fullURL {
-    width: 50%;
-    height: 30px;
+    width: 82%;
+    height: 50px;
+    font-size: 25px;
     
     border: #2e2e2e 2px solid;
-    border-radius: 5px;
+    border-radius: 10px 10px 0px 0px;
 
     text-align: center;
-    line-height: 7.5px;
+    line-height: 25px;
 
     background-color: #2a2a2a;
 }
 
 .button-display {
-    width: 80%;
+    width: 84%;
+    margin-top: -10px;
 
     display: flex;
-    justify-content: space-between;
+    
 }
 
 button[type=submit] {
-    height: 30px;
-    width: 125px;
+    height: 50px;
+    width: 33.3%;
 
+
+    font-size: 20px;
     font-weight: bold;
     color: white;
 
-    border: #ffffff26 2px solid;
-    border-radius: 5px;
+    border: #2e2e2e 2px solid;
+    background-color: #383838;
 }
 
 button[type=submit]:hover {
     cursor: pointer;
+    background-color: #464646;
 }
 
 
 
 .convert-next {
-    background-color: #3293ee;
+    /*background-color: #3293ee;*/
+    background-color: #383838;
+    float: left;
+
+    
+    border-radius: 0px 0px 0px 10px;
 }
+
+
 .view-all {
-    background-color: #ee3232;
+    float: center;
 }
+
 .copy-link {
     background-color: #32ee5a;
+    float: right;
+
+    border-radius: 0px 0px 10px 0px;
 }
